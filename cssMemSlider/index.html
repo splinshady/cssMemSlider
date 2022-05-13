@@ -11,28 +11,37 @@
 
 <body>
   <main class="container">
-    <section class="slider">
 
-      <input type="radio" name="radio" id="radio1" checked>
-      <input type="radio" name="radio" id="radio2">
-      <input type="radio" name="radio" id="radio3">
-      <input type="radio" name="radio" id="radio4">
+    <input type="radio" name="radio" id="radio1" checked>
+    <input type="radio" name="radio" id="radio2">
+    <input type="radio" name="radio" id="radio3">
+    <input type="radio" name="radio" id="radio4">
 
-      <article class="slide show">
-        <img src="./assets/mem1.jpg" alt="mem1">
-      </article>
-      <article class="slide">
-        <img src="./assets/mem2.jpg" alt="mem2">
-      </article>
-      <article class="slide">
-        <img src="./assets/mem3.jpg" alt="mem3">
-      </article>
-      <article class="slide">
-        <img src="./assets/mem4.jpg" alt="mem4">
-      </article>
-
+    <section class="slider-container">
+      <div class="slider">
+        <article class="slide slider-head" id="first1">
+          <img class="mem-img" src="./assets/mem1.jpg" alt="mem1">
+        </article>
+        <article class="slide">
+          <img class="mem-img" src="./assets/mem2.jpg" alt="mem2">
+        </article>
+        <article class="slide">
+          <img class="mem-img" src="./assets/mem3.jpg" alt="mem3">
+        </article>
+        <article class="slide">
+          <img class="mem-img" src="./assets/mem4.jpg" alt="mem4">
+        </article>
+      </div>
     </section>
-  </main>
+
+    <section class="descriptions">
+      <div class="descriptions-slider">
+        <p class="about descriptions-head">bear</p>
+        <p class="about">designers</p>
+        <p class="about">work hard</p>
+        <p class="about">brain</p>
+      </div>
+    </section>
 
     <section class="navigation">
       <label for="radio1" class="bar"></label>
@@ -40,8 +49,8 @@
       <label for="radio3" class="bar"></label>
       <label for="radio4" class="bar"></label>
     </section>
+  </main>
 
-  
 </body>
 
 </html>
