@@ -1,44 +1,69 @@
+body {
+  background-color: #333536;
+}
+
 .container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 90vw;
   margin: 0 auto;
-  border: 2px solid greenyellow;
+  border: 5px solid rgb(134, 112, 112);
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .slider-container {
   flex-basis: 100%;
   width: 100%;
-  height: 500px;
+  height: 80vh;
   max-height: 80vw;
   overflow: hidden;
-  border: 2px solid rebeccapurple;
   margin-bottom: 20px;
-}
-
-.descriptions {
-
 }
 
 .navigation {
   display: flex;
-  width: 200px;
-  height: 50px;
-  border: 2px solid greenyellow;
+  justify-content: center;
+  align-items: center;
+  height: min-content;
 }
 
 .bar {
+  margin: 3px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.bar-control {
   width: 10px;
   height: 10px;
-  padding: 10px;
-  margin: 5px;
-  background-color: blue;
+  border-radius: 50%;
+  border: 2px solid rgb(3, 134, 157);
+  background-color: rgb(53, 255, 221);
+}
+
+.bar:hover > .bar-control{
+  background-color: inherit;
+}
+.bar:active > .bar-control{
+  background-color: red;
+}
+#radio1:checked ~ .navigation #bar1 .bar-control {
+  background-color: rgb(0, 0, 0);
+}
+#radio2:checked ~ .navigation #bar2 .bar-control {
+  background-color: rgb(0, 0, 0);
+}
+#radio3:checked ~ .navigation #bar3 .bar-control {
+  background-color: rgb(0, 0, 0);
+}
+#radio4:checked ~ .navigation #bar4 .bar-control {
+  background-color: rgb(0, 0, 0);
 }
 
 input[name="radio"] {
-  position: absolute;
-  visibility: hidden;
+  display: none;
 }
 
 .slider {
@@ -75,9 +100,8 @@ input[name="radio"] {
 }
 
 .descriptions {
-  width: 100px;
-  height: 50px;
-  border: 2px solid greenyellow;
+  width: 60%;
+  height: min-content;
   overflow: hidden;
 }
 
@@ -89,8 +113,10 @@ input[name="radio"] {
 
 .about {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   width: 25%;
+  margin: 0;
+  color: antiquewhite;
   transition: all .6s;
 }
 
@@ -105,4 +131,19 @@ input[name="radio"] {
 }
 #radio4:checked ~ .descriptions .descriptions-head {
   margin-left: -75%;
+}
+
+@media (max-width: 375px) {
+  .container {
+    justify-content: center;
+  }
+
+  .navigation {
+    margin-bottom: 20px;
+  }
+
+  .descriptions {
+    order: 1;
+    flex-basis: 100%;
+  }
 }
