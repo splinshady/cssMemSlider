@@ -16,8 +16,8 @@ body {
 .slider-container {
   flex-basis: 100%;
   width: 100%;
-  height: 80vh;
-  max-height: 80vw;
+  height: 70vh;
+  max-height: 60vw;
   overflow: hidden;
   margin-bottom: 20px;
 }
@@ -39,27 +39,27 @@ body {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  border: 2px solid rgb(3, 134, 157);
-  background-color: rgb(53, 255, 221);
+  border: 2px solid hsl(323, 25%, 40%);
+  background-color: inherit;
 }
 
 .bar:hover > .bar-control{
-  background-color: inherit;
+  background-color: rgb(249, 237, 216);
 }
 .bar:active > .bar-control{
-  background-color: red;
+  background-color: #00eeff;
 }
 #radio1:checked ~ .navigation #bar1 .bar-control {
-  background-color: rgb(0, 0, 0);
+  background-color: #4417a6;
 }
 #radio2:checked ~ .navigation #bar2 .bar-control {
-  background-color: rgb(0, 0, 0);
+  background-color: #4417a6;
 }
 #radio3:checked ~ .navigation #bar3 .bar-control {
-  background-color: rgb(0, 0, 0);
+  background-color: #4417a6;
 }
 #radio4:checked ~ .navigation #bar4 .bar-control {
-  background-color: rgb(0, 0, 0);
+  background-color: #4417a6;
 }
 
 input[name="radio"] {
