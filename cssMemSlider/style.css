@@ -1,0 +1,149 @@
+body {
+  background-color: #333536;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 90vw;
+  margin: 0 auto;
+  border: 5px solid rgb(134, 112, 112);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.slider-container {
+  flex-basis: 100%;
+  width: 100%;
+  height: 70vh;
+  max-height: 60vw;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: min-content;
+}
+
+.bar {
+  margin: 3px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.bar-control {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid hsl(323, 25%, 40%);
+  background-color: inherit;
+}
+
+.bar:hover > .bar-control{
+  background-color: rgb(249, 237, 216);
+}
+.bar:active > .bar-control{
+  background-color: #00eeff;
+}
+#radio1:checked ~ .navigation #bar1 .bar-control {
+  background-color: #4417a6;
+}
+#radio2:checked ~ .navigation #bar2 .bar-control {
+  background-color: #4417a6;
+}
+#radio3:checked ~ .navigation #bar3 .bar-control {
+  background-color: #4417a6;
+}
+#radio4:checked ~ .navigation #bar4 .bar-control {
+  background-color: #4417a6;
+}
+
+input[name="radio"] {
+  display: none;
+}
+
+.slider {
+  width: 400%;
+  height: 100%;
+  display: flex;
+
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+.mem-img {
+  height: 100%;
+}
+
+#radio1:checked ~ .slider-container .slider-head {
+  margin-left: 0;
+}
+#radio2:checked ~ .slider-container .slider-head {
+  margin-left: -25%;
+}
+#radio3:checked ~ .slider-container .slider-head {
+  margin-left: -50%;
+}
+#radio4:checked ~ .slider-container .slider-head {
+  margin-left: -75%;
+}
+
+.descriptions {
+  width: 60%;
+  height: min-content;
+  overflow: hidden;
+}
+
+.descriptions-slider {
+  width: 400%;
+  height: 100%;
+  display: flex;
+}
+
+.about {
+  display: flex;
+  justify-content: start;
+  width: 25%;
+  margin: 0;
+  color: antiquewhite;
+  transition: all .6s;
+}
+
+#radio1:checked ~ .descriptions .descriptions-head {
+  margin-left: 0;
+}
+#radio2:checked ~ .descriptions .descriptions-head {
+  margin-left: -25%;
+}
+#radio3:checked ~ .descriptions .descriptions-head{
+  margin-left: -50%;
+}
+#radio4:checked ~ .descriptions .descriptions-head {
+  margin-left: -75%;
+}
+
+@media (max-width: 375px) {
+  .container {
+    justify-content: center;
+  }
+
+  .navigation {
+    margin-bottom: 20px;
+  }
+
+  .descriptions {
+    order: 1;
+    flex-basis: 100%;
+  }
+}
